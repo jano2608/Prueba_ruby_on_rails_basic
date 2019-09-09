@@ -1,0 +1,7 @@
+<%=form_with(model: @todo, local:true) do |t|%>
+
+<%=t.label :description%>
+<%=t.text_field :description%>
+<%=t.submit %>
+<%end%>
+<%=link_to '<<<Back', todos_path%>

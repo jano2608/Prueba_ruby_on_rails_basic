@@ -1,0 +1,12 @@
+<h1>lista</h1>
+
+<% @todos.each do |todo| %>
+
+<p><%="#{todo.description} "%></p>
+
+<%= link_to 'Ver', todo%>
+<%= link_to 'Editar',edit_path(todo)%>
+ <%= link_to 'Eliminar', todo, method: :delete , data:{confirm:'seguro que quieres borrar!!'}%>
+<%end%>
+<br>
+  <%=link_to "Nuevo ToDo", todos_new_path%>
