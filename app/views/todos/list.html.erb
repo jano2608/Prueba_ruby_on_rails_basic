@@ -1,6 +1,14 @@
 <h1>List</h1>
 
 <div class=" row">
+
+
+<div class="card bg-danger col">
+<h2>No Completado</h2>
+<% @todos_list_false.each do |todo| %>
+<p><%="#{todo.description}"%></p>
+<%end%>
+</div>
 <div class="card bg-success col">
 <h2>Completado</h2>
 <% @todos_list.each do |todo| %>
@@ -8,11 +16,4 @@
 <%end%>
 </div>
 
-<div class="card bg-danger col">
-
-<h2>No Completado</h2>
-<% @todos_list_false.each do |todo| %>
-<p><%="#{todo.description}"%></p>
-<%end%>
-</div>
 </div>
