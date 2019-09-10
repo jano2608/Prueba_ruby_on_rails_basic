@@ -7,6 +7,7 @@
 <%= link_to 'Ver', todo%>
 <%= link_to 'Editar',edit_path(todo)%>
  <%= link_to 'Eliminar', todo, method: :delete , data:{confirm:'seguro que quieres borrar!!'}%>
+ <%= link_to 'completado',completed_path(todo)%>
 <%end%>
 <br>
   <%=link_to "Nuevo ToDo", todos_new_path%>
