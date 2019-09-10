@@ -1,13 +1,16 @@
-<h1>lista</h1>
+<h1>ToDo</h1>
 
 <% @todos.each do |todo| %>
-
-<p><%="#{todo.description} "%></p>
-
-<%= link_to 'Ver', todo%>
-<%= link_to 'Editar',edit_path(todo)%>
- <%= link_to 'Eliminar', todo, method: :delete , data:{confirm:'seguro que quieres borrar!!'}%>
- <%= link_to 'completado',completed_path(todo)%>
+<div class="card text-white bg-info container">
+  <p class=''><%="#{todo.description}"%></p>
+  <div class="row-1">
+    <%= link_to 'Ver', todo,class:"btn text-white btn-success col-1 "%>
+    <%= link_to 'Editar',edit_path(todo),class:"btn  text-white btn-warning col-sm-1 "%>
+    <%= link_to 'Eliminar', todo, method: :delete , data:{confirm:'seguro que quieres borrar!!'},class:"btn text-white btn-danger col-sm-1"%>
+    <%= link_to 'completado',completed_path(todo) ,class:"btn text-white btn-dark col-sm-3"%>
+  </div>
+  <br>
+</div>
+<br>
 <%end%>
 <br>
-  <%=link_to "Nuevo ToDo", todos_new_path%>

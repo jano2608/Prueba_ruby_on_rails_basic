@@ -1,7 +1,10 @@
+<h1>Edit</h1>
+<br>
 <%=form_with(model: @todo, local:true) do |t|%>
 
-<%=t.label :description%>
-<%=t.text_field :description%>
-<%=t.submit %>
+<%=t.label :description ,class:'col-sm-1'%>
+<%=t.text_field :description,class:'col-sm-1'%>
+<%=t.submit 'Editar',class:'btn btn-info col-sm-1'%>
 <%end%>
-<%=link_to '<<<Back', todos_path%>
+<br>
+<%=link_to '<<<Back', todos_path,class:'btn btn-danger'%>

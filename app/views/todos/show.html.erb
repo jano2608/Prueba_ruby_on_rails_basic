@@ -1,5 +1,9 @@
 <h1>show</h1>
-
-<p><%= "#{@todo.description} / #{@todo.completed}"%></p>
+<% if @todo.completed == true  %>
+<% a= "completado"%>
+<% else %>
+<% a= "no completado"%>
+<% end %>
+<p><%= "#{@todo.description} / #{a}"%></p>
 
 <%=link_to "<<<Atras",todos_path %>
