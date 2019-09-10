@@ -1,9 +1,17 @@
 <h1>show</h1>
-<% if @todo.completed == true  %>
-<% a= "completado"%>
-<% else %>
-<% a= "no completado"%>
-<% end %>
-<p><%= "#{@todo.description} / #{a}"%></p>
+<div class="card container bg-info">
 
-<%=link_to "<<<Atras",todos_path %>
+
+<% if @todo.completed == true  %>
+<% complete= "completado"%>
+<% else %>
+<% complete= "no completado"%>
+<% end %>
+<h3><%= "#{@todo.description}"%></h3>
+<% if @todo.completed == true%>
+<h3 class="h33"><%="#{complete}"%></h3>
+<% else %>
+<h3 class="h34"><%="#{complete}"%></h3>
+<% end %> 
+</div>
+<%=link_to "<<<Atras",todos_path,class:'btn btn-danger' %>

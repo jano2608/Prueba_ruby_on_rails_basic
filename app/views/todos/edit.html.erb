@@ -1,10 +1,15 @@
 <h1>Edit</h1>
 <br>
+<div class="card bg-info container ">
+
+<br>
 <%=form_with(model: @todo, local:true) do |t|%>
 
-<%=t.label :description ,class:'col-sm-1'%>
-<%=t.text_field :description,class:'col-sm-1'%>
-<%=t.submit 'Editar',class:'btn btn-info col-sm-1'%>
+<%=t.label :description ,class:'col-sm-2'%>
+<%=t.text_field :description,class:'col-sm-4'%>
+<%=t.submit 'Editar',class:'btn btn-warning col-sm-1'%>
 <%end%>
 <br>
-<%=link_to '<<<Back', todos_path,class:'btn btn-danger'%>
+</div>
+<br>
+<%=link_to '<<<Back', todos_path,class:'btn btn-danger ws'%>
